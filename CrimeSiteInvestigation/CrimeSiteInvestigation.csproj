@@ -183,6 +183,7 @@
     <Content Include="img\portfolio\thumbnails\4.jpg" />
     <Content Include="img\portfolio\thumbnails\5.jpg" />
     <Content Include="img\portfolio\thumbnails\6.jpg" />
+    <None Include="Properties\PublishProfiles\CrimeSiteInvestigation - Web Deploy.pubxml" />
     <None Include="Resources\Orc.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
