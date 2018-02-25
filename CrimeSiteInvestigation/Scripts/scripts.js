@@ -2,19 +2,19 @@
 $(document).ready(function () {
 
     $('.carousel').carousel({ interval: false });
-
+    
     $('#BotaoResolver').click(function () {
         var suspeito = $("#myCarousel1").find(".active").index();
         var local = $("#myCarousel2").find(".active").index();
         var arma = $("#myCarousel3").find(".active").index();
-
+        
         $.ajax({
             url: "/Home/TentarResolver",
             dataType: "json",
             type: "Get",
-            data: { suspeito, local, arma },
+            data: { 'suspeito': suspeito, 'local': suspeito, 'arma': suspeito },
             success: function (data) {
-
+                
                 if (data.Success) {
 
                     $("#suspeito").html($("#myCarousel1").find(".active").find("div").html());
