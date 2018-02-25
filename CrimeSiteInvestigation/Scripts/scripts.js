@@ -12,7 +12,7 @@ $(document).ready(function () {
             url: "/Home/TentarResolver",
             dataType: "json",
             type: "Get",
-            data: { 'suspeito': suspeito, 'local': suspeito, 'arma': suspeito },
+            data: { 'suspeito': suspeito, 'local': local, 'arma': arma },
             success: function (data) {
                 
                 if (data.Success) {
