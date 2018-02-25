@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Crime Site Investigation";
+}
+
+<div class="jumbotron" style="background-color: crimson; width:100%; border-radius: 0; text-align: center">
+    <h1>Pistas</h1>
+    <br>
+
+    <div class="container">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <p class="carousel-caption">
+                        <div>
+                            <h2><strong>Vitima</strong></h2>
+                            <img src="https://mindfulnesscoachingschool.com/wp-content/uploads/2015/06/steve-jobs-768x432.jpg"
+                                 alt=""
+                                 style="width: 246px; height: 200px; border: 4px solid black;">
+                        </div>
+                        <br>
+                        <p>O empresário Sean Bean foi assassinado e o corpo dele foi deixado na frente da delegacia de polícia.</p>
+                    </p>
+                </div>
+
+                <div class="item">
+                    <p class="carousel-caption">
+                        <div>
+                            <h2><strong>Inspetor</strong></h2>
+                            <img src="https://cdn.ome.lt/extras/conteudos/SeanBean.jpg"
+                                 alt="" style="width: 246px; height: 200px; border: 4px solid black;">
+                        </div>
+                        <br>
+                        <p>O Inspetor Jacques Clouseau foi escolhido para investigar este caso.</p>
+                    </p>
+                </div>
+
+                <div class="item">
+                    <p class="carousel-caption">
+                        <div>
+                            <h2><strong>Investigação</strong></h2>
+                            <img src="https://conceito.de/wp-content/uploads/2015/09/protocolo-de-investiga%C3%A7%C3%A3o-350x232.png" alt="" style="width: 246px; height: 200px; border: 4px solid black;">
+                        </div>
+                        <br>
+                        <p>Após uma série de investigações, ele organizou uma lista com prováveis assassinos, os locais do crime e quais armas poderiam ter sido utilizadas.</p>
+                    </p>
+                </div>
+
+                <div class="item">
+                    <p class="carousel-caption">
+                        <div>
+                            <h2><strong>Testemunha</strong></h2>
+                            <img src="~/img/Orc.jpg" alt="" style="width: 246px; height: 200px; border: 4px solid black;">
+                        </div>
+                        <br>
+                        <p>Uma testemunha foi encontrada, mas ela só consegue responder se Clouseau fornecer uma teoria.</p>
+                    </p>
+                </div>
+
+                <div class="item">
+                    <p class="carousel-caption">
+                        <div>
+                            <h2><strong>Interrogatório</strong></h2>
+                            <img src="https://i1.wp.com/ww1.prweb.com/prfiles/2006/07/30/418529/interrogation.jpg" alt="" style="width: 246px; height: 200px; border: 4px solid black;">
+                        </div>
+                        <br>
+                        <p>Para cada teoria o Inspetor Jacques Clouseau 'chuta' um assassino, um local e uma arma. A testemunha então responde com um número.</p>
+                    </p>
+                </div>
+
+
+                <div class="item">
+                    <p class="carousel-caption">
+                        <h2><strong>Solucione o caso</strong></h2>
+                        <div><img src="http://blog.projetoexamedeordem.com.br/wp-content/uploads/2016/02/investiga%C3%A7%C3%A3o.jpg" alt="" style="width: 246px; height: 200px; border: 4px solid black;"></div>
+                        <p>Clique abaixo para iniciar a investigação.</p>
+                    </p>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        @Html.ActionLink("Iniciar a investigação >>", "Investigation", "Home", new { @class = "btn btn-default btn-lg", @style = "" })
+
+    </div>
+
+</div>

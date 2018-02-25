@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - CSI - Crime Site Investigation</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CSI - Crime Site Investigation", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Pistas", "Clue", "Home")</li>
+                    <li>@Html.ActionLink("Investigação", "Investigation", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - CSI - Crime Site Investigation</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({ interval: false });
+
+            $('#BotaoResolver').click(function () {
+                var suspeito = $("#myCarousel1").find(".active").index();
+                var local = $("#myCarousel2").find(".active").index();
+                var arma = $("#myCarousel3").find(".active").index();
+
+                $.ajax({
+                    url: "/Home/TentarResolver",
+                    dataType: "json",
+                    type: "Get",
+                    data: { suspeito, local, arma },
+                    success: function (data) {
+
+                        if (data.Success) {
+
+                            $("#suspeito").html($("#myCarousel1").find(".active").find("div").html()); 
+                            $("#local").html($("#myCarousel2").find(".active").find("div").html()); 
+                            $("#arma").html($("#myCarousel3").find(".active").find("div").html()); 
+                            $("#cartao").html(data.Tentativa);
+                            if (data.Tentativa == 0) {
+                                $(".venceu").show();
+                                $("#tentarnovamente").hide();
+                            } else {
+                                $("#tentarnovamente").show();
+                                $(".venceu").hide();
+                            }
+
+                            $("#result").show();
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                });
+
+            });
+        });
+        
+    </script>
+
+</body>
+</html>
