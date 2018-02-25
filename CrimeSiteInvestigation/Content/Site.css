@@ -227,3 +227,7 @@ textarea {
 .div-corousel {
     min-height: 200px;
 }
+
+.btn-tentar {   
+    margin-left: -300px;
+}

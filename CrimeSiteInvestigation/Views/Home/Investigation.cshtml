@@ -161,10 +161,10 @@
         <div class="venceu venceu-mensagem">
             <span class="venceu-parabens">Parabens! Você desvendou o crime!</span>
             <br>
-            @Html.ActionLink("Clique aqui para iniciar outra investigação >>", "Investigation", "Home", new { @class = "btn btn-default btn-lg", @onClick = "$('#result').hide();" })
+            @Html.ActionLink("Iniciar outra investigação >>", "Investigation", "Home", new { @class = "btn btn-default btn-lg", @onClick = "$('#result').hide();" })
         </div>
         <div id="tentarnovamente" class="tentar-novamente">
-            <a class="btn btn-default btn-lg" onclick="$('#result').hide();">Clique aqui para tentar novamente >></a>
+            <a class="btn btn-default btn-lg btn-tentar" onclick="$('#result').hide();">Tentar novamente >></a>
         </div>
 
     </div>
