@@ -11,9 +11,9 @@ namespace CrimeSiteInvestigation.Model
         {
             Random rnd = new Random();
             jogoAtual = new[] {
-                rnd.Next(0, suspeitos-1),
-                rnd.Next(0, locais-1),
-                rnd.Next(0, armas-1) };
+                rnd.Next(0, suspeitos),
+                rnd.Next(0, locais),
+                rnd.Next(0, armas) };
             return jogoAtual;
         }
 
@@ -35,7 +35,7 @@ namespace CrimeSiteInvestigation.Model
             }
             
             // retorna um dos erros
-            return erros[rnd.Next(1, erros.Count())-1];
+            return erros[rnd.Next(0, erros.Count())];
         }
     }
 }
