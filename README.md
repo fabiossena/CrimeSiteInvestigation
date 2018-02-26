@@ -26,3 +26,6 @@ Usado JQuery para requisições AJAX.
 - As imagens ainda estou usando o link que peguei no google, vou trazer para o projeto colocando em um resources.
 
 
+### Estrutra:
+
+![alt text](https://docs.google.com/uc?export=download&id=1PD_i-zfwPx4bpmsrq4Yy9RtS8aCNKjZb)
