@@ -1,9 +1,12 @@
 # CrimeSiteInvestigation
 
+### Link:
 http://crimesiteinvestigation.azurewebsites.net/
 
+
 ### Objetivo:
-- Descubrar que é o assassino usando as pistas fornecidas e o depoimento (limitado) de uma testemunha.
+- Descubra quem é o assassino usando as pistas fornecidas e o depoimento (limitado) da única testemunha.
+
 
 ## Estrutura:
 
