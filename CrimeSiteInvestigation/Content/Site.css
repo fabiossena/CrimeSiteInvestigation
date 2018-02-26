@@ -210,11 +210,15 @@ textarea {
 .carousel-control-left-custom {
     z-index: 999;
     margin: -20px;
+    background-color: transparent;
+    background-image: none !important;
 }
 
 
 .carousel-control-right-custom {
     z-index: 999;
+    background-color: transparent;
+    background-image: none !important;
 }
 
 .image-corousel {
